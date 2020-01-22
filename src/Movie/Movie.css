@@ -1,0 +1,78 @@
+.text-style{
+    color: rgb(207, 202, 202);
+}
+#movie-detail.card{
+    background-color: rgb(27, 26, 26);
+    border: none;
+}
+.badge{
+    font-size: 12px;
+    background-color: #ad2d0d;
+    color: rgb(207, 202, 202);
+}
+
+.movie-facts{
+    font-size: 17px;
+    color: rgb(207, 202, 202);
+    padding: 15px;
+    border-top: 1px solid #ad2d0d;
+    border-bottom: 1px solid #ad2d0d;
+}
+
+.fa-calendar-times-o, .fa-money, .fa-clock-o{
+    color: #ad2d0d;
+}
+
+.rating2{
+    font-size: 18px;
+}
+.tagline{
+    font-size: 16px;
+    color:#ad2d0d;
+}
+
+.topic{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h4{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: rgb(207, 202, 202);
+}
+
+@media (max-width: 575px) { 
+    .poster-pic{
+        height: 340px;
+        width: 220px;
+    }
+}
+
+@media (min-width: 576px) { 
+    .poster-pic{
+        height: 360px;
+        width: 240px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .poster-pic{
+        height: 380px;
+        width: 260px;
+    }
+}
+@media (min-width: 992px) { 
+    .poster-pic{
+        height: 400px;
+        width: 280px;
+    }
+}
+   
+@media (min-width: 1200px) { 
+    .poster-pic{
+        height: 420px;
+        width: 300px;
+    }
+    
+}

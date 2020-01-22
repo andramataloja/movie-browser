@@ -1,0 +1,49 @@
+.navBarTheme{
+    font-size: 28px;
+    font-family: 'Nunito', sans-serif;
+}
+.navbar{
+    border: none;
+}
+.fa-search{
+    color: rgb(207, 202, 202);
+    font-size: 18px;
+}
+.search-button{
+    background-color: rgb(27, 26, 26);
+    border:none
+}
+input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(207, 202, 202);
+    border-bottom: 0.5px solid rgb(110, 107, 107);
+}
+input:focus{
+    outline:none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color:rgb(180, 175, 175);
+    border-bottom: 0.5px solid rgb(110, 107, 107);
+}
+.search-button:focus {
+    outline:none;
+    border: none;
+}
+a {
+    text-decoration: none;
+    color:  rgb(238, 234, 234);
+}
+a:hover{
+    text-decoration: none;
+    color:  rgb(255, 255, 255);
+}
+
+.form-inline:hover, .form-inline:focus, .form-inline:active {
+    background: rgba(70, 68, 68, 0.2)  
+  }
+.fa.fa-search:hover, .fa.fa-search:focus, .fa.fa-search:active{
+    color: white;
+}

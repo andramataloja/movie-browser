@@ -1,0 +1,12 @@
+.navigation{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color:  rgb(207, 202, 202);
+    font-size: 16px;
+    
+}
+.navigation:hover{
+    color: white;
+    cursor: pointer;
+}
+
