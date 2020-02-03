@@ -21,39 +21,44 @@ class MovieFilter extends React.Component {
     this.props.filterSelection(this.state.movieFilterSelection);
   };
 
+  activeTab = filterType => {
+    const currentFilter = this.props.filter
+    let className = "mr-3 movie-filter-btn hvr-underline-from-center";
+    if (currentFilter === filterType) {
+      className = "mr-3 movie-filter-btn hvr-underline-from-center underliner";
+    }
+    return className;
+  };
+
   render() {
     return (
-      <div className="btn-group my-3" role="group">
+      <div className=" my-3" role="group">
         <Link
           to={"/movies/popular/"}
           onClick={() => this.handleClick("popular")}
-          className="btn btn-secondary hvr-underline-from-center"
+          className={this.activeTab("popular")}
         >
-          {" "}
           Popular
         </Link>
         <Link
           to={"/movies/top_rated"}
           onClick={() => this.handleClick("top_rated")}
-          className="btn btn-secondary hvr-underline-from-center"
+          className={this.activeTab("top_rated")}
         >
-          {" "}
           Top Rated
         </Link>
         <Link
           to={"/movies/upcoming"}
           onClick={() => this.handleClick("upcoming")}
-          className="btn btn-secondary hvr-underline-from-center"
+          className={this.activeTab("upcoming")}
         >
-          {" "}
           Upcoming
         </Link>
         <Link
           to={"/movies/now_playing"}
           onClick={() => this.handleClick("now_playing")}
-          className="btn btn-secondary hvr-underline-from-center"
+          className={this.activeTab("now_playing")}
         >
-          {" "}
           Now Playing
         </Link>
       </div>
