@@ -142,6 +142,7 @@ class Home extends React.Component {
             activePage={this.state.activePage}
           ></NavBar>
           <MovieFilter
+            filter = {this.state.movieFilterSelection}
             filterSelection={this.getFilterSelection}
             activePage={this.state.activePage}
           ></MovieFilter>
