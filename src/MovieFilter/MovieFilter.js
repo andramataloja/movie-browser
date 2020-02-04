@@ -22,7 +22,7 @@ class MovieFilter extends React.Component {
   };
 
   activeTab = filterType => {
-    const currentFilter = this.props.filter
+    const currentFilter = this.props.filter;
     let className = "mr-3 movie-filter-btn hvr-underline-from-center";
     if (currentFilter === filterType) {
       className = "mr-3 movie-filter-btn hvr-underline-from-center underliner";
@@ -32,7 +32,7 @@ class MovieFilter extends React.Component {
 
   render() {
     return (
-      <div className=" my-3" role="group">
+      <div className=" my-3 ml-3" role="group">
         <Link
           to={"/movies/popular/"}
           onClick={() => this.handleClick("popular")}

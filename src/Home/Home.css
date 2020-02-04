@@ -1,185 +1,190 @@
-.card-border{
-    border:none;
+.card-border {
+  border: none;
 }
-.card-body{
-    background-color: rgb(27, 26, 26);
-    padding: 0.8rem;
+.card-body {
+  background-color: rgb(27, 26, 26);
+  padding: 0.8rem;
 }
-.search-info{
-    color: rgb(207, 202, 202);
-    font-size: 16px;
-
+.search-info {
+  color: rgb(207, 202, 202);
+  font-size: 16px;
 }
-.text-style{
-    color: rgb(207, 202, 202);
+.text-style {
+  color: rgb(207, 202, 202);
 }
-.rating{
-    color: rgb(202, 196, 196);
+.rating {
+  color: rgb(202, 196, 196);
 }
-.fa-star{
-    color: rgb(245, 245, 102);
+.fa-star {
+  color: rgb(245, 245, 102);
 }
 .movie-card:hover {
-    transition: all 300ms;
-    transform: translateY(-10px);
+  transition: all 300ms;
+  transform: translateY(-10px);
 }
-.movie-card{
-    transition: all 300ms;
-    transform: translateY(10px);
+.movie-card {
+  transition: all 300ms;
+  transform: translateY(10px);
+}
+#movie-pic.card,
+#movie-pic.card .card-img,
+#movie-pic.card .card-img-overlay {
+  border-radius: 10px;
+}
+#movie-pic.card .card-img {
+  opacity: 0.6;
+  position: relative;
+}
+#movie-pic.card .img-text {
+  color: rgb(243, 239, 239);
+  position: absolute;
+}
+.movie-img {
+  object-fit: cover;
 }
 
-#movie-pic.card, #movie-pic.card .card-img, #movie-pic.card .card-img-overlay{
-    border-radius: 10px;
-    
-}
-#movie-pic.card .card-img{
-    opacity: 0.6;
-    position: relative;
-}
-
-#movie-pic.card .img-text{
-    color: rgb(243, 239, 239); 
-    position: absolute;
-}
-.movie-img{
-    object-fit: cover;
-}
-
-
-@media (max-width: 575px) { 
-    #movie-pic.card, #movie-pic.card .card-img{
-        height:  190px;
-        width: 320px;  
-    }
-    #movie-pic.card .img-text{
-        font-size: 12px;
-        bottom: 8px;
-    }
-    #movie-pic.card .card-title{
-        font-size: 18px;
-    }
-    #movie-card.card{
-        width: 75px;
-        font-size: 9px;
-    }
-    .card-img{
-        height: 115px;
-        width: 75px;
-    }
-    .rating{
-        font-size: 8px;
-    }
+@media (max-width: 575px) {
+  #movie-pic.card,
+  #movie-pic.card .card-img {
+    height: 190px;
+    width: 320px;
   }
-
-  @media (min-width: 576px) { 
-    #movie-pic.card, #movie-pic.card .card-img{
-        height:  220px;
-        width: 380px;  
-    }
-    #movie-pic.card .img-text{
-        font-size: 13px;
-        bottom: 10px;
-    }
-    #movie-pic.card .card-title{
-        font-size: 20px;
-    }
-    #movie-card.card{
-        width: 100px;
-        font-size: 12px;
-    }
-    .card-img{
-        height: 155px;
-        width: 100px;
-    }
-    .rating{
-        font-size: 11px;
-    }
+  #movie-pic.card .img-text {
+    font-size: 12px;
+    bottom: 8px;
   }
-
-  @media (min-width: 768px) { 
-    #movie-pic.card, #movie-pic.card .card-img{
-        height:  250px; 
-        width: 460px;  
-    }
-    #movie-pic.card .img-text{
-        font-size: 14px;
-        bottom: 12px;
-    }
-    #movie-pic.card .card-title{
-        font-size: 24px;
-    }
-    #movie-card.card{
-        width: 125px;
-        font-size: 13px;
-    }
-    .card-img{
-        height: 180px;
-        width: 125px;
-    }
-    .rating{
-        font-size: 12px;
-    }
-   }
-
-   @media (min-width: 992px) { 
-    #movie-pic.card, #movie-pic.card .card-img{
-        height:  300px; 
-        width: 560px; 
-    }
-    #movie-pic.card .img-text{
-        font-size: 16px;
-        bottom: 15px;
-    }
-    #movie-pic.card .card-title{
-        font-size: 26px;
-    }
-    #movie-card.card{
-        width: 170px;
-        font-size: 14px;
-    }
-    .card-img{
-        height: 250px;
-        width: 170px;
-    }
-    .rating{
-        font-size: 13px;
-    }
-   }
-   
-   @media (min-width: 1200px) { 
-    #movie-pic.card, #movie-pic.card .card-img{
-        height:  330px; 
-        width: 630px;
-    }
-    #movie-pic.card .img-text{
-        font-size: 16px;
-        bottom: 20px;
-    }
-    #movie-pic.card .card-title{
-        font-size: 26px;
-    }
-    #movie-card.card{
-        width: 180px;
-        font-size: 14px;
-    }
-    .card-img{
-        height: 260px;
-        width: 180px;
-    }
-    .rating{
-        font-size: 13px;
-    }
-   }
-
-   .hvr-fade {
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+  #movie-pic.card .card-title {
+    font-size: 18px;
   }
-  .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-    background: rgba(0, 0, 0, 0.4); 
+  #movie-card.card {
+    width: 75px;
+    font-size: 9px;
   }
-  .badge.cover-badge{
-    background-color:rgb(116, 112, 112, 0.5);
-    color: white;
-    font-weight: 500;
+  .card-img {
+    height: 115px;
+    width: 75px;
+  }
+  .rating {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 576px) {
+  #movie-pic.card,
+  #movie-pic.card .card-img {
+    height: 220px;
+    width: 380px;
+  }
+  #movie-pic.card .img-text {
+    font-size: 13px;
+    bottom: 10px;
+  }
+  #movie-pic.card .card-title {
+    font-size: 20px;
+  }
+  #movie-card.card {
+    width: 100px;
+    font-size: 12px;
+  }
+  .card-img {
+    height: 155px;
+    width: 100px;
+  }
+  .rating {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  #movie-pic.card,
+  #movie-pic.card .card-img {
+    height: 250px;
+    width: 460px;
+  }
+  #movie-pic.card .img-text {
+    font-size: 14px;
+    bottom: 12px;
+  }
+  #movie-pic.card .card-title {
+    font-size: 24px;
+  }
+  #movie-card.card {
+    width: 125px;
+    font-size: 13px;
+  }
+  .card-img {
+    height: 180px;
+    width: 125px;
+  }
+  .rating {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  #movie-pic.card,
+  #movie-pic.card .card-img {
+    height: 300px;
+    width: 560px;
+  }
+  #movie-pic.card .img-text {
+    font-size: 16px;
+    bottom: 15px;
+  }
+  #movie-pic.card .card-title {
+    font-size: 26px;
+  }
+  #movie-card.card {
+    width: 170px;
+    font-size: 14px;
+  }
+  .card-img {
+    height: 250px;
+    width: 170px;
+  }
+  .rating {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #movie-pic.card,
+  #movie-pic.card .card-img {
+    height: 330px;
+    width: 630px;
+  }
+  #movie-pic.card .img-text {
+    font-size: 16px;
+    bottom: 20px;
+  }
+  #movie-pic.card .card-title {
+    font-size: 26px;
+  }
+  #movie-card.card {
+    width: 180px;
+    font-size: 14px;
+  }
+  .card-img {
+    height: 260px;
+    width: 180px;
+  }
+  .rating {
+    font-size: 13px;
+  }
+}
+
+.hvr-fade {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active {
+  background: none;
+}
+.badge.cover-badge {
+  background-color: rgb(116, 112, 112, 0.5);
+  color: white;
+  font-weight: 500;
 }

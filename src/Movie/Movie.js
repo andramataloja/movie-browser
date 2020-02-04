@@ -74,7 +74,13 @@ class Movie extends React.Component {
                       <h5 className="card-title">
                         {movie.title}
                         {this.state.movie.vote_average ? (
-                        <div className="rating2 float-right"> <i className="fa fa-star mr-1" aria-hidden="true"></i> {movie.vote_average}</div>
+                          <div className="rating2 float-right">
+                            <i
+                              className="fa fa-star mr-1"
+                              aria-hidden="true"
+                            ></i>
+                            {movie.vote_average}
+                          </div>
                         ) : (
                           ""
                         )}
@@ -108,27 +114,31 @@ class Movie extends React.Component {
                 </div>
               </div>
               <div className="row movie-facts">
-              {this.state.movie.release_date ? (
-                <div className="col-sm-12 col-md-4 mb-2 text-center">
-                  <i className="fa fa-calendar-times-o" aria-hidden="true"></i>{" "}
-                  Release date: {movie.release_date}
-                </div>
+                {this.state.movie.release_date ? (
+                  <div className="col-sm-12 col-md-4 mb-2 text-center">
+                    <i
+                      className="fa fa-calendar-times-o"
+                      aria-hidden="true"
+                    ></i>
+                    Release date: {movie.release_date}
+                  </div>
                 ) : (
                   " "
                 )}
                 {this.state.movie.budget ? (
-                <div className="col-sm-12 col-md-4 mb-2 text-center">
-                  <i className="fa fa-money" aria-hidden="true"></i> Movie
-                  budget: {formatBudget(movie.budget)}
-                </div>
-                 ) : (
+                  <div className="col-sm-12 col-md-4 mb-2 text-center">
+                    <i className="fa fa-money" aria-hidden="true"></i> Movie
+                    budget: {formatBudget(movie.budget)}
+                  </div>
+                ) : (
                   " "
                 )}
                 {this.state.movie.runtime ? (
-                <div className="col-sm-12 col-md-4 text-center">
-                  <i className="fa fa-clock-o" aria-hidden="true"></i> Duration:{" "}
-                  {formatTime(movie.runtime)}
-                </div>
+                  <div className="col-sm-12 col-md-4 text-center">
+                    <i className="fa fa-clock-o" aria-hidden="true"></i>
+                    Duration:
+                    {formatTime(movie.runtime)}
+                  </div>
                 ) : (
                   " "
                 )}
