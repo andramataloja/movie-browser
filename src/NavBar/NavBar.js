@@ -21,7 +21,9 @@ class NavBar extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.sendQuery();
+    if(this.state.searchQuery!==""){
+      this.sendQuery();
+    }
   }
 
   sendQuery = () => {
