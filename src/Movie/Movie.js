@@ -4,7 +4,7 @@ import Actor from "./Actor";
 import Navigation from "../Navigation/Navigation";
 import "./Actor.css";
 
-const apiKey = "d9aede722599117d216a2e4fdbeb23b9";
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class Movie extends React.Component {
   constructor(props) {

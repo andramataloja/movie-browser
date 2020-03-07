@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Moment from "react-moment";
 
-const apiKey = "d9aede722599117d216a2e4fdbeb23b9";
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class Home extends React.Component {
   constructor(props) {
@@ -69,11 +69,11 @@ class Home extends React.Component {
   componentDidMount() {
     const activePage = this.state.activePage;
     if (this.state.query !== "") {
-      const moviesEndpointSearch=`https://api.themoviedb.org/3/search/movie?include_adult=false&page=${activePage}&language=en-US&query=${this.props.match.params.query}&api_key=${apiKey}`;
-      const moviesEndpointForCoverImgSearch=`https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&language=en-US&query=${this.props.match.params.query}&api_key=${apiKey}`;
-      this.fetchSearch(moviesEndpointSearch);  
+      const moviesEndpointSearch = `https://api.themoviedb.org/3/search/movie?include_adult=false&page=${activePage}&language=en-US&query=${this.props.match.params.query}&api_key=${apiKey}`;
+      const moviesEndpointForCoverImgSearch = `https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&language=en-US&query=${this.props.match.params.query}&api_key=${apiKey}`;
+      this.fetchSearch(moviesEndpointSearch);
       this.fetchCoverImg(moviesEndpointForCoverImgSearch);
-    } else{
+    } else {
       const moviesEndpoint = `https://api.themoviedb.org/3/movie/${this.state.movieFilterSelection}?page=${activePage}&language=en-US&api_key=${apiKey}`;
       const moviesEndpointForCoverImg = `https://api.themoviedb.org/3/movie/${this.state.movieFilterSelection}?page=1&language=en-US&api_key=${apiKey}`;
       this.fetchMovies(moviesEndpoint);
@@ -108,7 +108,7 @@ class Home extends React.Component {
       .catch(error => {});
   };
 
-  fetchCoverImgGenres=()=>{
+  fetchCoverImgGenres = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${this.state.movieImgId}?language=en-US&api_key=${apiKey}`
     )
@@ -119,9 +119,9 @@ class Home extends React.Component {
         });
       })
       .catch(error => {});
-  }
+  };
 
-  fetchSearch=(searchEndpoint)=> {
+  fetchSearch = searchEndpoint => {
     fetch(searchEndpoint)
       .then(response => response.json())
       .then(data => {
@@ -131,7 +131,7 @@ class Home extends React.Component {
         });
       })
       .catch(error => {});
-  }
+  };
   render() {
     const { moviesList } = this.state;
     return (
@@ -142,7 +142,7 @@ class Home extends React.Component {
             activePage={this.state.activePage}
           ></NavBar>
           <MovieFilter
-            filter = {this.state.movieFilterSelection}
+            filter={this.state.movieFilterSelection}
             filterSelection={this.getFilterSelection}
             activePage={this.state.activePage}
           ></MovieFilter>
@@ -160,7 +160,10 @@ class Home extends React.Component {
                     {this.state.genres ? (
                       <div className="genres mb-1">
                         {this.state.genres.map(genre => (
-                          <span className="badge badge-secondary mr-2 cover-badge" key={genre.id}>
+                          <span
+                            className="badge badge-secondary mr-2 cover-badge"
+                            key={genre.id}
+                          >
                             {genre.name}
                           </span>
                         ))}
@@ -186,9 +189,11 @@ class Home extends React.Component {
             ""
           )}
           {this.state.query ? (
-          <div className="mt-4 search-info" >Search for: {this.state.query} </div>
+            <div className="mt-4 search-info">
+              Search for: {this.state.query}{" "}
+            </div>
           ) : (
-          ""
+            ""
           )}
           <div className="d-flex flex-wrap justify-content-between mt-4">
             {moviesList.map(movie => (
@@ -206,13 +211,10 @@ class Home extends React.Component {
                   <div className="card-body text-style">
                     <p className="card-title">{movie.title}</p>
                     {movie.vote_average ? (
-                    <span className="rating float-right">
-                      <i
-                        className="fa fa-star mr-1"
-                        aria-hidden="true"
-                      ></i>
-                      {movie.vote_average}
-                    </span>
+                      <span className="rating float-right">
+                        <i className="fa fa-star mr-1" aria-hidden="true"></i>
+                        {movie.vote_average}
+                      </span>
                     ) : (
                       ""
                     )}
