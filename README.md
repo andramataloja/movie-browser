@@ -1,3 +1,14 @@
+# MovieBrowser
+
+Application to browse, filter and search movies and their details (using TMDB API).<br />
+
+
+![Screenshot](movie-browser-screen.png)
+
+## Running locally
+
+To run locally you need create your own API key (https://www.themoviedb.org/documentation/api), then create .env file and add line: REACT_APP_API_KEY={YOUR_API_KEY_HERE} 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
